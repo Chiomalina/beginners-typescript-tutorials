@@ -35,7 +35,7 @@ function addNewPizza(pizzaObj) {
   menu.push(pizzaObj);
 }
 
-function placeOrder(pizzaName) {
+function placeOrder(pizzaName: string) {
   const selectedPizza = menu.find((pizzaObj) => pizzaObj.name === pizzaName);
 
   if(!selectedPizza) {
@@ -52,7 +52,7 @@ function placeOrder(pizzaName) {
   return newOrder;
 }
 
-function completeOrder(orderId) {
+function completeOrder(orderId: number) {
   const selectedOrder = orderQueue.find((order) => order.id === orderId);
 
   if (!selectedOrder) {
