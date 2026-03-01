@@ -1,7 +1,3 @@
-/**
- * Challenge: Fix the TS warnings about orderQueue!
- */
-
 type Pizza = {
     name: string
     price: number
@@ -40,8 +36,17 @@ function placeOrder(pizzaName: string) {
     return newOrder
 }
 
+/**
+ * Challenge: Fix the warning below by handling the "sad path" scenario!
+ */
+
 function completeOrder(orderId: number) {
     const order = orderQueue.find(order => order.id === orderId)
+    
+    if (!order) {
+        console.error("order was not found")
+        return
+    }
     order.status = "completed"
     return order
 }
