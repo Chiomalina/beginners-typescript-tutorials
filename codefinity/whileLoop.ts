@@ -7,3 +7,4 @@ while (condition) {
     }
 }
 console.log(`Total number of rabbits is ${number_of_rabbits}`)
+
