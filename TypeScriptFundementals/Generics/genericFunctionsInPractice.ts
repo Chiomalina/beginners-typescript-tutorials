@@ -9,3 +9,14 @@ const str = firstElement(["a", "b", "c"]); // str: string | undefined
 
 console.log(num);
 console.log(str);
+
+
+// Generic function to merge two objects of the same type
+function mergeObjects<T>(obj1: T, obj2: T): T {
+  return { ...obj1, ...obj2 };
+}
+
+// Usage example:
+const merged = mergeObjects({ name: "Alice" }, { age: 30 });
+// merged: { name: string; age: number }
+console.log(merged)
