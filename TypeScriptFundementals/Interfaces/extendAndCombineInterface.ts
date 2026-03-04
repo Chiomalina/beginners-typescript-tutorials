@@ -14,3 +14,18 @@ const developer: Employee = {
   employeeId: 101,
   department: "Engineering"
 };
+
+interface Contactable {
+  phone: string;
+}
+
+interface Emailable {
+  email: string;
+}
+
+type ContactInfo = Contactable & Emailable;
+
+const customer: ContactInfo = {
+  phone: "555-1234",
+  email: "customer@example.com"
+};
