@@ -1,6 +1,6 @@
 function printId(id: string | number) {
     if(typeof id === "string") {
-        console.log("Your ID is: " + id.toLocaleUpperCase());
+        console.log("Your ID is: " + id.toLocaleUpperCasepop());
     } else {
         console.log("Your ID is: " + id);
     }
